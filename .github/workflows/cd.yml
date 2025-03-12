@@ -19,9 +19,11 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: my-vite-app
 
       - name: Build the app
         run: npm run build
+        working-directory: my-vite-app
 
       - name: Deploy to Azure
         uses: azure/webapps-deploy@v2
